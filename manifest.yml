@@ -1,0 +1,13 @@
+---
+applications:
+- name: work-site
+  buildpack: go_buildpack
+  memory: 32M
+  disk_quota: 32M
+  routes:
+  - route: zoom.rosen.house
+  - route: gabe-work.cfapps.io
+  - route: gabe.cfapps.io
+  env:
+    GOPACKAGENAME: github.com/rosenhouse/work-site
+    DEFAULT_REDIRECT: https://pivotal.zoom.us/my/gaber
